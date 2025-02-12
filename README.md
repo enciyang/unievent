@@ -1,16 +1,24 @@
-# unievent
 
-A new Flutter project.
+import 'package:flutter/material.dart';
+import 'package:unievent/screens/bottom_bar.dart';
 
-## Getting Started
+void main() {
+runApp(const MyApp());
+}
 
-This project is a starting point for a Flutter application.
+class MyApp extends StatelessWidget {
+const MyApp({super.key});
 
-A few resources to get you started if this is your first Flutter project:
+@override
+Widget build(BuildContext context) {
+return MaterialApp(
+title: 'Flutter Demo',
+theme: ThemeData(
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const BottomBar(),
+    );
+}
+}
